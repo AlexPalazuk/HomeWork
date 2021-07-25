@@ -1,6 +1,6 @@
 def foo(file):
-    stream = open(file, mode='r')
-    line = stream.readlines()
+    with open(file, mode='r') as stream:
+        line = stream.readlines()
     return line
 list1 = foo("./Task1/test1.txt")
 list2 = foo("./Task1/test2.txt")
